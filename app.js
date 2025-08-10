@@ -1,5 +1,10 @@
 require("dotenv").config()
+const connectToDatabase = require("./database");
 const app = require("express")();
+
+connectToDatabase();
+
+
 
 app.get("/", (req, res) => {
     console.log("Hello!");
